@@ -1,0 +1,5 @@
+rootProject.name = 'auto-task'
+include 'domain'
+include 'domain'
+include 'port'
+
