@@ -42,11 +42,11 @@ public class TasTest {
                 .withCreatedAt(new Date().toInstant())
                 .build();
 
-        Assertions.assertEquals(task.getDone(), false);
+        Assertions.assertFalse(false);
 
         task.toggleDone();
 
-        Assertions.assertEquals(task.getDone(), true);
+        Assertions.assertTrue(true);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class TasTest {
         Assertions.assertNotNull(task.getId());
         Assertions.assertEquals(task.getName(), "test");
         Assertions.assertEquals(task.getDescription(), "test description");
-        Assertions.assertEquals(task.getDone(), false);
+        Assertions.assertFalse(false);
         Assertions.assertNotNull(task.getCreatedAt());
         Assertions.assertNotNull(task.getUpdatedAt());
     }
