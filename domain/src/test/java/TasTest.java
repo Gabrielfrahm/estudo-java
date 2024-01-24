@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Date;
 
 
-public class TasTest {
+class TasTest {
     @Test
-    public void ShouldBeAbleToCreateAnTask(){
+    void ShouldBeAbleToCreateAnTask(){
         final Task task = new Task.Builder()
                 .withName("test")
                 .withDescription("test description")
@@ -20,7 +20,7 @@ public class TasTest {
     }
 
     @Test
-    public void ShouldBeAbleToCreateAnTaskWithId(){
+    void ShouldBeAbleToCreateAnTaskWithId(){
         final Task task = new Task.Builder()
                 .withId("85ec0437-7854-4437-aeda-9f21933fa50d")
                 .withName("test")
@@ -34,7 +34,7 @@ public class TasTest {
     }
 
     @Test
-    public void ShouldBeAbleToToggleAnTask(){
+    void ShouldBeAbleToToggleAnTask(){
         final Task task = new Task.Builder()
                 .withName("test")
                 .withDescription("test description")
@@ -50,7 +50,7 @@ public class TasTest {
     }
 
     @Test
-    public void ShouldBeAbleToGetAllAttributes(){
+    void ShouldBeAbleToGetAllAttributes(){
         final Task task = new Task.Builder()
                 .withId("85ec0437-7854-4437-aeda-9f21933fa50d")
                 .withName("test")
@@ -62,8 +62,8 @@ public class TasTest {
 
         Assertions.assertInstanceOf(Task.class,task);
         Assertions.assertNotNull(task.getId());
-        Assertions.assertEquals(task.getName(), "test");
-        Assertions.assertEquals(task.getDescription(), "test description");
+        Assertions.assertEquals("test",task.getName() );
+        Assertions.assertEquals("test description", task.getDescription() );
         Assertions.assertFalse(false);
         Assertions.assertNotNull(task.getCreatedAt());
         Assertions.assertNotNull(task.getUpdatedAt());
