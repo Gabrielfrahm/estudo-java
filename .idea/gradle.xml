@@ -9,8 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adapter" />
+            <option value="$PROJECT_DIR$/application" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/port" />
+            <option value="$PROJECT_DIR$/port/shared" />
+            <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>
       </GradleProjectSettings>

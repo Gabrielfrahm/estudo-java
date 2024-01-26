@@ -1,4 +1,9 @@
 rootProject.name = 'auto-task'
 include 'domain'
 include 'port'
+include 'port:shared'
+findProject(':port:shared')?.name = 'shared'
+include 'shared'
+include 'application'
+include 'adapter'
 
