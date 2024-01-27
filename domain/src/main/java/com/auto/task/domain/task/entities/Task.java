@@ -20,7 +20,7 @@ public class Task {
         this.description = props.description;
         this.done = props.done != null ? props.done : false;
         this.createdAt = props.createdAt != null ? props.createdAt : Instant.now();
-        this.updatedAt = props.updatedAt;
+        this.updatedAt = props.updatedAt != null ? props.createdAt : Instant.now();
     }
 
     @Override

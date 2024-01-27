@@ -4,6 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface Repository<E> {
-    Optional<E> create(E entity);
-    Optional<List<E>> findAll();
+    E create(E entity);
+    List<E> findAll();
 }

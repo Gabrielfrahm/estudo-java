@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  taskdb:
+    image: postgres
+    networks:
+      - user-network
+    container_name: db-task
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: task
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+#    healthcheck:
+#      test: [ 'CMD-SHELL', 'pg_isready -U task' ]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+
+
+volumes:
+  postgres_data:
+
+networks:
+  user-network:
+    driver: bridge
